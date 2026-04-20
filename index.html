@@ -45,10 +45,37 @@
       #overlay {
         position: absolute;
         bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 20px;
+        border-radius: 30px;
+        background: rgba(20, 20, 20, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         color: white;
-        font-size: 14px;
-        font-family: sans-serif;
-        opacity: 0.7;
+        font-size: 13px;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        letter-spacing: 0.5px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        animation: fadeIn 1.2s ease;
+      }
+
+      #overlay:active {
+        transform: translateX(-50%) scale(0.96);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(10px);
+        }
+        to {
+          opacity: 0.7;
+          transform: translateX(-50%) translateY(0);
+        }
       }
 
       .watermark-cover {
@@ -74,7 +101,7 @@
         <source src="video.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5
       </video>
-      <div id="overlay">Toca para activar sonido</div>
+      <div id="overlay">Activar audio · PURELIA</div>
     </div>
     <div class="watermark-cover"></div>
     <script>
