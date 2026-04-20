@@ -44,26 +44,31 @@
 
       #overlay {
         position: absolute;
-        bottom: 40px;
+        bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
-        padding: 12px 20px;
-        border-radius: 30px;
-        background: rgba(20, 20, 20, 0.6);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        color: white;
-        font-size: 13px;
-        font-family: "Helvetica Neue", Arial, sans-serif;
-        letter-spacing: 0.5px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 14px 26px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         cursor: pointer;
-        transition: all 0.3s ease;
-        animation: fadeIn 1.2s ease;
+        transition: all 0.25s ease;
+        opacity: 0;
+        animation: fadeIn 1.2s ease forwards;
       }
 
       #overlay:active {
-        transform: translateX(-50%) scale(0.96);
+        transform: translateX(-50%) scale(0.95);
         background: rgba(255, 255, 255, 0.15);
       }
 
@@ -73,7 +78,7 @@
           transform: translateX(-50%) translateY(10px);
         }
         to {
-          opacity: 0.7;
+          opacity: 1;
           transform: translateX(-50%) translateY(0);
         }
       }
@@ -101,7 +106,7 @@
         <source src="video.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5
       </video>
-      <div id="overlay">Activar audio · PURELIA</div>
+      <div id="overlay">Activar audio</div>
     </div>
     <div class="watermark-cover"></div>
     <script>
